@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi CV - EmpleosFácil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="../index.html" class="logo">E<span>levy</span></a>
+            <ul class="nav-links">
+                <li><a href="../index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="ofertas.html"><i class="fas fa-briefcase"></i> Ofertas</a></li>
+                <li><a href="login.html" class="btn-nav btn-login"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</a></li>
+                <li><a href="registro-candidato.html" class="btn-nav btn-register"><i class="fas fa-user-plus"></i> Regístrate</a></li>
+            </ul>
+            <button id="mobile-menu-btn" class="btn btn-outline d-md-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div style="margin: 30px 0;">
+            <h1 style="color: var(--primary-color);">Mi Currículum</h1>
+        </div>
+        
+        <div class="dashboard">
+            <div class="sidebar">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <img src="https://via.placeholder.com/150" alt="Foto de perfil" style="border-radius: 50%; width: 120px; height: 120px; object-fit: cover;">
+                    <h3 style="margin-top: 10px;">Juan Pérez</h3>
+                    <p style="color: var(--gray-color);">Desarrollador Web</p>
+                </div>
+                
+                <ul class="sidebar-menu">
+                    <li><a href="panel-candidato.html">Dashboard</a></li>
+                    <li><a href="#" class="active">Mi CV</a></li>
+                    <li><a href="ofertas.html">Buscar Ofertas</a></li>
+                    <li><a href="#">Mis Postulaciones</a></li>
+                    <li><a href="#">Configuración</a></li>
+                </ul>
+            </div>
+            
+            <div class="main-content">
+                <form id="cv-form" action="#" method="post">
+                    <div style="display: flex; flex-wrap: wrap; gap: 30px; margin-bottom: 30px;">
+                        <div style="flex: 0 0 200px;">
+                            <img src="https://via.placeholder.com/200" alt="Foto de perfil" style="width: 100%; border-radius: 10px;">
+                            <div style="margin-top: 10px;">
+                                <input type="file" id="foto" name="foto" accept="image/*">
+                            </div>
+                        </div>
+                        
+                        <div style="flex: 1; min-width: 300px;">
+                            <div class="form-group">
+                                <label for="objetivo_profesional">Objetivo Profesional</label>
+                                <textarea class="form-control" id="objetivo_profesional" name="objetivo_profesional" rows="4" required></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="disponibilidad">Disponibilidad</label>
+                                <select class="form-control" id="disponibilidad" name="disponibilidad" required>
+                                    <option value="">Seleccionar...</option>
+                                    <option value="inmediata">Inmediata</option>
+                                    <option value="15_dias">En 15 días</option>
+                                    <option value="30_dias">En 30 días</option>
+                                    <option value="negociable">Negociable</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 style="color: var(--primary-color); margin-bottom: 20px; border-bottom: 1px solid var(--light-gray); padding-bottom: 10px;">Formación Académica</h3>
+                    
+                    <div class="card">
+                        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                            <div class="form-group" style="flex: 1; min-width: 250px;">
+                                <label for="institucion">Institución</label>
+                                <input type="text" class="form-control" id="institucion" name="institucion" required>
+                            </div>
+                            
+                            <div class="form-group" style="flex: 1; min-width: 250px;">
+                                <label for="titulo">Título</label>
+                                <input type="text" class="form-control" id="titulo" name="titulo" required>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                            <div class="form-group" style="flex: 1; min-width: 250px;">
+                                <label for="fecha_inicio_educacion">Fecha de Inicio</label>
+                                <input type="date" class="form-control" id="fecha_inicio_educacion" name="fecha_inicio_educacion" required>
+                            </div>
+                            
+                            <div class="form-group" style="flex: 1; min-width: 250px;">
+                                <label for="fecha_fin_educacion">Fecha de Fin</label>
+                                <input type="date" class="form-control" id="fecha_fin_educacion" name="fecha_fin_educacion">
+                                <div style="margin-top: 10px;">
+                                    <input type="checkbox" id="actual_educacion" name="actual_educacion">
+                                    <label for="actual_educacion">Actualmente cursando</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: right; margin: 10px 0 30px;">
+                        <button type="button" class="btn btn-outline">+ Agregar otra formación</button>
+                    </div>
+                    
+                    <h3 style="color: var(--primary-color); margin-bottom: 20px; border-bottom: 1px solid var(--light-gray); padding-bottom: 10px;">Experiencia Laboral</h3>
+                    
+                    <div class="card">
+                        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                            <div class="form-group" style="flex: 1; min-width: 250px;">
+                                <label for="empresa">Empresa</label>
+                                <input type="text" class="form-control" id="empresa" name="empresa" required>
+                            </div>
+                            
+                            <div class="form-group" style="flex: 1; min-width: 250px;">
+                                <label for="puesto">Puesto</label>
+                                <input type="text" class="form-control" id="puesto" name="puesto" required>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                            <div class="form-group" style="flex: 1; min-width: 250px;">
+                                <label for="fecha_inicio_experiencia">Fecha de Inicio</label>
+                                <input type="date" class="form-control" id="fecha_inicio_experiencia" name="fecha_inicio_experiencia" required>
+                            </div>
+                            
+                            <div class="form-group" style="flex: 1; min-width: 250px;">
+                                <label for="fecha_fin_experiencia">Fecha de Fin</label>
+                                <input type="date" class="form-control" id="fecha_fin_experiencia" name="fecha_fin_experiencia">
+                                <div style="margin-top: 10px;">
+                                    <input type="checkbox" id="actual_experiencia" name="actual_experiencia">
+                                    <label for="actual_experiencia">Trabajo actual</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="descripcion_experiencia">Descripción</label>
+                            <textarea class="form-control" id="descripcion_experiencia" name="descripcion_experiencia" rows="3" required></textarea>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: right; margin: 10px 0 30px;">
+                        <button type="button" class="btn btn-outline">+ Agregar otra experiencia</button>
+                    </div>
+                    
+                    <h3 style="color: var(--primary-color); margin-bottom: 20px; border-bottom: 1px solid var(--light-gray); padding-bottom: 10px;">Habilidades</h3>
+                    
+                    <div class="card">
+                        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                            <div class="form-group" style="flex: 1; min-width: 250px;">
+                                <label for="habilidad">Habilidad</label>
+                                <input type="text" class="form-control" id="habilidad" name="habilidad" required>
+                            </div>
+                            
+                            <div class="form-group" style="flex: 1; min-width: 250px;">
+                                <label for="nivel_habilidad">Nivel</label>
+                                <select class="form-control" id="nivel_habilidad" name="nivel_habilidad" required>
+                                    <option value="">Seleccionar...</option>
+                                    <option value="principiante">Principiante</option>
+                                    <option value="intermedio">Intermedio</option>
+                                    <option value="avanzado">Avanzado</option>
+                                    <option value="experto">Experto</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: right; margin: 10px 0 30px;">
+                        <button type="button" class="btn btn-outline">+ Agregar otra habilidad</button>
+                    </div>
+                    
+                    <h3 style="color: var(--primary-color); margin-bottom: 20px; border-bottom: 1px solid var(--light-gray); padding-bottom: 10px;">Idiomas</h3>
+                    
+                    <div class="card">
+                        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                            <div class="form-group" style="flex: 1; min-width: 250px;">
+                                <label for="idioma">Idioma</label>
+                                <input type="text" class="form-control" id="idioma" name="idioma" required>
+                            </div>
+                            
+                            <div class="form-group" style="flex: 1; min-width: 250px;">
+                                <label for="nivel_idioma">Nivel</label>
+                                <select class="form-control" id="nivel_idioma" name="nivel_idioma" required>
+                                    <option value="">Seleccionar...</option>
+                                    <option value="basico">Básico</option>
+                                    <option value="intermedio">Intermedio</option>
+                                    <option value="avanzado">Avanzado</option>
+                                    <option value="nativo">Nativo</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: right; margin: 10px 0 30px;">
+                        <button type="button" class="btn btn-outline">+ Agregar otro idioma</button>
+                    </div>
+                    
+                    <h3 style="color: var(--primary-color); margin-bottom: 20px; border-bottom: 1px solid var(--light-gray); padding-bottom: 10px;">Logros y Proyectos</h3>
+                    
+                    <div class="form-group">
+                        <textarea class="form-control" id="logros_proyectos" name="logros_proyectos" rows="4"></textarea>
+                    </div>
+                    
+                    <h3 style="color: var(--primary-color); margin-bottom: 20px; border-bottom: 1px solid var(--light-gray); padding-bottom: 10px;">Redes Profesionales</h3>
+                    
+                    <div class="form-group">
+                        <label for="linkedin">LinkedIn</label>
+                        <input type="url" class="form-control" id="linkedin" name="linkedin" placeholder="https://www.linkedin.com/in/tu-perfil">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="portfolio">Sitio Web / Portfolio</label>
+                        <input type="url" class="form-control" id="portfolio" name="portfolio" placeholder="https://www.tuportfolio.com">
+                    </div>
+                    
+                    <h3 style="color: var(--primary-color); margin-bottom: 20px; border-bottom: 1px solid var(--light-gray); padding-bottom: 10px;">Referencias</h3>
+                    
+                    <div class="card">
+                        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                            <div class="form-group" style="flex: 1; min-width: 250px;">
+                                <label for="nombre_referencia">Nombre del Contacto</label>
+                                <input type="text" class="form-control" id="nombre_referencia" name="nombre_referencia">
+                            </div>
+                            
+                            <div class="form-group" style="flex: 1; min-width: 250px;">
+                                <label for="empresa_referencia">Empresa</label>
+                                <input type="text" class="form-control" id="empresa_referencia" name="empresa_referencia">
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                            <div class="form-group" style="flex: 1; min-width: 250px;">
+                                <label for="telefono_referencia">Teléfono</label>
+                                <input type="tel" class="form-control" id="telefono_referencia" name="telefono_referencia">
+                            </div>
+                            
+                            <div class="form-group" style="flex: 1; min-width: 250px;">
+                                <label for="email_referencia">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="email_referencia" name="email_referencia">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: right; margin: 10px 0 30px;">
+                        <button type="button" class="btn btn-outline">+ Agregar otra referencia</button>
+                    </div>
+                    
+                    <h3 style="color: var(--primary-color); margin-bottom: 20px; border-bottom: 1px solid var(--light-gray); padding-bottom: 10px;">CV en PDF</h3>
+                    
+                    <div class="form-group">
+                        <label for="cv_pdf">Adjuntar CV en PDF (opcional)</label>
+                        <input type="file" class="form-control" id="cv_pdf" name="cv_pdf" accept=".pdf">
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 40px;">
+                        <button type="submit" class="btn btn-primary" style="width: 200px;">Guardar CV</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>EmpleosFácil</h3>
+                    <p>Conectando talento con oportunidades desde 2023.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <p><a href="../index.html" style="color: #adb5bd; text-decoration: none;">Inicio</a></p>
+                    <p><a href="ofertas.html" style="color: #adb5bd; text-decoration: none;">Ofertas</a></p>
+                    <p><a href="panel-candidato.html" style="color: #adb5bd; text-decoration: none;">Mi Perfil</a></p>
+                    <p><a href="#" style="color: #adb5bd; text-decoration: none;">Mi CV</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>info@elevy.com</p>
+                    <p>+1 809 555 1234</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 EmpleosFácil. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicar Oferta - EmpleosFácil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="../index.html" class="logo">E<span>levy</span></a>
+            <ul class="nav-links">
+                <li><a href="../index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="ofertas.html"><i class="fas fa-briefcase"></i> Ofertas</a></li>
+                <li><a href="login.html" class="btn-nav btn-login"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</a></li>
+                <li><a href="registro-candidato.html" class="btn-nav btn-register"><i class="fas fa-user-plus"></i> Regístrate</a></li>
+            </ul>
+            <button id="mobile-menu-btn" class="btn btn-outline d-md-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div style="margin: 30px 0;">
+            <h1 style="color: var(--primary-color);">Publicar Oferta de Empleo</h1>
+        </div>
+        
+        <div class="dashboard">
+            <div class="sidebar">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <img src="https://via.placeholder.com/150" alt="Logo de empresa" style="width: 120px; height: 120px; object-fit: cover;">
+                    <h3 style="margin-top: 10px;">TechSolutions S.A.</h3>
+                    <p style="color: var(--gray-color);">Tecnología</p>
+                </div>
+                
+                <ul class="sidebar-menu">
+                    <li><a href="panel-empresa.html">Dashboard</a></li>
+                    <li><a href="#" class="active">Publicar Oferta</a></li>
+                    <li><a href="#">Mis Ofertas</a></li>
+                    <li><a href="#">Candidatos</a></li>
+                    <li><a href="#">Perfil de Empresa</a></li>
+                    <li><a href="#">Configuración</a></li>
+                </ul>
+            </div>
+            
+            <div class="main-content">
+                <form id="publish-job-form" action="#" method="post">
+                    <div class="form-group">
+                        <label for="titulo_puesto">Título del Puesto</label>
+                        <input type="text" class="form-control" id="titulo_puesto" name="titulo_puesto" required>
+                    </div>
+                    
+                    <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                        <div class="form-group" style="flex: 1; min-width: 250px;">
+                            <label for="ubicacion">Ubicación</label>
+                            <input type="text" class="form-control" id="ubicacion" name="ubicacion" required>
+                        </div>
+                        
+                        <div class="form-group" style="flex: 1; min-width: 250px;">
+                            <label for="tipo_contrato">Tipo de Contrato</label>
+                            <select class="form-control" id="tipo_contrato" name="tipo_contrato" required>
+                                <option value="">Seleccionar...</option>
+                                <option value="tiempo_completo">Tiempo Completo</option>
+                                <option value="medio_tiempo">Medio Tiempo</option>
+                                <option value="temporal">Temporal</option>
+                                <option value="proyecto">Por Proyecto</option>
+                                <option value="practicas">Prácticas Profesionales</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                        <div class="form-group" style="flex: 1; min-width: 250px;">
+                            <label for="salario_min">Salario Mínimo</label>
+                            <input type="number" class="form-control" id="salario_min" name="salario_min">
+                        </div>
+                        
+                        <div class="form-group" style="flex: 1; min-width: 250px;">
+                            <label for="salario_max">Salario Máximo</label>
+                            <input type="number" class="form-control" id="salario_max" name="salario_max">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mostrar_salario">Mostrar Salario en la Oferta</label>
+                        <div>
+                            <input type="checkbox" id="mostrar_salario" name="mostrar_salario" checked>
+                            <label for="mostrar_salario">Sí, mostrar el rango salarial</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="descripcion">Descripción del Puesto</label>
+                        <textarea class="form-control" id="descripcion" name="descripcion" rows="5" required></textarea>
+                        <small class="form-text">Describe las responsabilidades, el día a día y lo que se espera del candidato.</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="requisitos">Requisitos</label>
+                        <textarea class="form-control" id="requisitos" name="requisitos" rows="5" required></textarea>
+                        <small class="form-text">Incluye formación académica, experiencia, habilidades técnicas y blandas necesarias.</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="beneficios">Beneficios (opcional)</label>
+                        <textarea class="form-control" id="beneficios" name="beneficios" rows="3"></textarea>
+                        <small class="form-text">Menciona los beneficios adicionales como seguro médico, horario flexible, etc.</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Categorías</label>
+                        <div style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 10px;">
+                            <div>
+                                <input type="checkbox" id="cat_tecnologia" name="categorias[]" value="tecnologia">
+                                <label for="cat_tecnologia">Tecnología</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="cat_marketing" name="categorias[]" value="marketing">
+                                <label for="cat_marketing">Marketing</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="cat_ventas" name="categorias[]" value="ventas">
+                                <label for="cat_ventas">Ventas</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="cat_finanzas" name="categorias[]" value="finanzas">
+                                <label for="cat_finanzas">Finanzas</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="cat_rrhh" name="categorias[]" value="rrhh">
+                                <label for="cat_rrhh">RRHH</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="cat_diseno" name="categorias[]" value="diseno">
+                                <label for="cat_diseno">Diseño</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="fecha_cierre">Fecha de Cierre de la Oferta</label>
+                        <input type="date" class="form-control" id="fecha_cierre" name="fecha_cierre">
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 40px;">
+                        <button type="submit" class="btn btn-primary" style="width: 200px;">Publicar Oferta</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>EmpleosFácil</h3>
+                    <p>Conectando talento con oportunidades desde 2023.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <p><a href="../index.html" style="color: #adb5bd; text-decoration: none;">Inicio</a></p>
+                    <p><a href="#" style="color: #adb5bd; text-decoration: none;">Publicar Oferta</a></p>
+                    <p><a href="panel-empresa.html" style="color: #adb5bd; text-decoration: none;">Mi Empresa</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>info@elevy.com</p>
+                    <p>+1 809 555 1234</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 EmpleosFácil. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
