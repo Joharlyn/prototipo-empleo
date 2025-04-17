@@ -48,3 +48,8 @@ Navega a través de las diferentes páginas para explorar la interfaz de usuario
 
 
 Elevy - Elevando el futuro del reclutamiento
+
+# Integrantes encargados del proyecto/prototipo.
+
+Billy Eduardo Dionicio Mercedes 2022-0433
+Joharlyn Steven Gonzalez Zabala 2023-0181
